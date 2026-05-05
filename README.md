@@ -74,6 +74,3 @@ This repository is optimized for a monolithic deployment on **Railway**. It buil
 3. In the Railway project settings, add your Environment Variables (specifically `MONGO_URI`, `JWT_SECRET`, and `NODE_ENV=production`).
 4. Railway will automatically use the root `package.json` to install dependencies, build the React frontend, and start the Node.js backend to serve the entire application on a single port.
 
-## 📝 License
-
-This project is licensed under the MIT License.
