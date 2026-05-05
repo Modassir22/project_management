@@ -9,7 +9,7 @@ const Assessments = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Modal State
+
   const [showModal, setShowModal] = useState(false);
   const [newAssessment, setNewAssessment] = useState({ title: '', projectId: '', assignedTo: '' });
 
@@ -142,7 +142,7 @@ const Assessments = () => {
         </div>
       </div>
 
-      {/* Admin Create Modal */}
+
       {showModal && user.role === 'Admin' && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -182,7 +182,7 @@ const Assessments = () => {
         </div>
       )}
 
-      {/* Member Submit Modal */}
+
       {showSubmitModal && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -204,7 +204,7 @@ const Assessments = () => {
         </div>
       )}
 
-      {/* Admin Review Modal */}
+
       {showReviewModal && (
         <div className="modal-overlay">
           <div className="modal-content">

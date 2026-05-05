@@ -21,7 +21,7 @@ const assessmentSchema = mongoose.Schema({
     ref: 'User',
   },
   submission: {
-    type: String, // Text answer or work link
+    type: String,
   },
   score: {
     type: Number,

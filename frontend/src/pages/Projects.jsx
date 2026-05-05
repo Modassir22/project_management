@@ -10,7 +10,7 @@ const Projects = () => {
   const [allUsers, setAllUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Modal State
+
   const [showModal, setShowModal] = useState(false);
   const [newProject, setNewProject] = useState({ title: '', description: '', memberIds: [] });
 

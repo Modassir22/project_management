@@ -12,17 +12,17 @@ export const getTasks = async (req, res) => {
       res.json(tasks);
     } else {
       if (projectId) {
-        // Find if user is in project
+
         const project = await Project.findById(projectId);
         if (project && project.members.includes(req.user._id)) {
-           // Can see all tasks in this project
+
            const tasks = await Task.find(query).populate('project', 'title').populate('assignedTo', 'name');
            return res.json(tasks);
         } else {
            return res.status(403).json({ message: 'Not authorized' });
         }
       } else {
-        // Just return assigned tasks across all projects
+
         query.assignedTo = req.user._id;
         const tasks = await Task.find(query).populate('project', 'title').populate('assignedTo', 'name');
         res.json(tasks);

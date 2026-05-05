@@ -15,14 +15,14 @@ const ProjectDetails = () => {
   const [allUsers, setAllUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Modals State
+
   const [showTaskModal, setShowTaskModal] = useState(false);
   const [newTask, setNewTask] = useState({ title: '', description: '', assignedToId: '', priority: 'Medium', dueDate: '' });
   
   const [selectedTask, setSelectedTask] = useState(null);
   const [taskUpdateData, setTaskUpdateData] = useState({ status: '', feedback: '', assignedToId: '' });
 
-  // Add Member State
+
   const [showAddMember, setShowAddMember] = useState(false);
   const [selectedNewMember, setSelectedNewMember] = useState('');
 
@@ -324,7 +324,7 @@ const ProjectDetails = () => {
         </div>
       )}
 
-      {/* Task Details Popup Modal */}
+
       {selectedTask && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -349,7 +349,7 @@ const ProjectDetails = () => {
               </div>
             </div>
 
-            {/* If assigned to current user, or if admin, allow updating status */}
+
             {(user.role === 'Admin' || (selectedTask.assignedTo && selectedTask.assignedTo._id === user._id)) ? (
               <form onSubmit={handleUpdateTask}>
                 

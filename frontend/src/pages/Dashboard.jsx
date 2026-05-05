@@ -36,7 +36,7 @@ const Dashboard = () => {
   const completedTasks = tasks.filter(t => t.status === 'Done').length;
   const pendingTasks = tasks.filter(t => t.status !== 'Done').length;
   
-  // Recent tasks (last 5)
+
   const recentTasks = [...tasks].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 5);
 
   const getPriorityBadge = (priority) => {
